@@ -1,0 +1,7 @@
+class Solution:
+    def findDuplicates(self, nums: List[int]) -> List[int]:
+        a = Counter(nums)
+        b = Counter(set(nums))
+        ans = a - b
+        return ans.keys()     
+        
